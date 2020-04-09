@@ -69,17 +69,17 @@ docker tag data-my-datasource-script:$tag covidgraph/data-my-datasource-script:v
 docker push covidgraph/data-my-datasource-script:$tag
 ```
 
-To be able to puplish your script to the docker hub organization `covidgraph` you need to be member. ping @mpreusse or @motey for that.
+To be able to puplish your script to the docker hub organization `covidgraph` you need to be member. ping [Martin](https://github.com/mpreusse) or @motey for that.
 Otherwise just puplish under your dockerhub username.
 
 #### Publish via guthub actions
 
 A more convienent way of puplishing your image is, to let github take care of that. You can use github `Actions` for that.
-As an exmaple have a look at https://github.com/covidgraph/data_cord19 or ping @motey
+As an exmaple have a look at https://github.com/covidgraph/data_cord19 or ping [Tim](https://github.com/motey)
 
 ### Register your script at Motherlode
 
-just ping @motey for that and tell him the location of your docker image
+just ping [Tim](https://github.com/motey) for that and tell him the location of your docker image
 
 Thats it! :)
 
