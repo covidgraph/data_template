@@ -13,6 +13,8 @@ When a developer created a script, it can be registered at https://github.com/co
 Motherlode will run the script to load the data into the DEV instance of covidgraph.
 When the function and content of the data is verfied, it can be run by motherlode against the PROD instance.
 
+If you write you script in python, you can take this repo as template. When you write in another laguage, take it as inspiration and just follow the "Connect to the correct neo4j instance" part
+
 # How it works
 
 All data source scripts will be wrapped in a docker container. Motherlode is just a python script, pulling the data source docker images from docker hub and run them.
@@ -56,7 +58,6 @@ We share the scripts via docker images at https://hub.docker.com/
 ### Wrap your script
 
 When you finished developeing your script, you have to "dockerize"/"container" it.
-If you write you script in python, you can take this template as insporation. When you write in another laguage, the internet is full of examples :)
 
 ### Build your script and puplish it
 
