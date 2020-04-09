@@ -69,7 +69,7 @@ docker tag data-my-datasource-script:$tag covidgraph/data-my-datasource-script:v
 docker push covidgraph/data-my-datasource-script:$tag
 ```
 
-To be able to puplish your script to the docker hub organization `covidgraph` you need to be member. ping [Martin](https://github.com/mpreusse) or @motey for that.
+To be able to puplish your script to the docker hub organization `covidgraph` you need to be member. ping [Martin](https://github.com/mpreusse) or [Tim](https://github.com/motey) for that.
 Otherwise just puplish under your dockerhub username.
 
 #### Publish via guthub actions
