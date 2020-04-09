@@ -90,7 +90,7 @@ All following text belongs to the template README.md. Cut here when you create a
 
 This script loads data X and Y from source Z into the neo4j based covidgraph
 
-Maintainer: {You}[https://github.com/{YourGuthubid}]
+Maintainer: {You}[https://github.com/{YourGitHub.Com-id}]
 
 Version: 0.0.1
 
