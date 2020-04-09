@@ -9,6 +9,7 @@ This repository serves as a template for developers writing scripts to load data
 We try to have data loading scripts in a certain format to build a automated data loading pipeline.
 
 When a developer created a script, it can be registered at https://github.com/covidgraph/motherlode
+
 Motherlode will run the script to load the data into the DEV instance of covidgraph.
 When the function and content of the data is verfied, it can be run by motherlode against the PROD instance.
 
