@@ -13,7 +13,7 @@ When a developer created a script, it can be registered at https://github.com/co
 Motherlode will run the script to load the data into the DEV instance of covidgraph.
 When the function and content of the data is verfied, it can be run by motherlode against the PROD instance.
 
-If you write you script in python, you can take this repo as template. When you write in another laguage, take it as inspiration and just follow the "Connect to the correct neo4j instance" part
+If you write your script in python, you can take this repo as template. When you write in another laguage, take it as inspiration and just follow the "Connect to the correct neo4j instance" part
 
 # How it works
 
@@ -71,13 +71,12 @@ docker tag data-my-datasource-script:$tag covidgraph/data-my-datasource-script:v
 docker push covidgraph/data-my-datasource-script:$tag
 ```
 
-To be able to puplish your script to the docker hub organization `covidgraph` you need to be member. ping [Martin](https://github.com/mpreusse) or [Tim](https://github.com/motey) for that.
-Otherwise just puplish under your dockerhub username.
+To be able to publish your script to the docker hub organization `covidgraph` (you need to be member. ping [Martin](https://github.com/mpreusse) or [Tim](https://github.com/motey) for that)
 
 #### Publish via guthub actions
 
 A more convienent way of puplishing your image is, to let github take care of that. You can use github `Actions` for that.
-As an exmaple have a look at https://github.com/covidgraph/data_cord19 or ping [Tim](https://github.com/motey)
+As an example have a look at https://github.com/covidgraph/data_cord19 or ping [Tim](https://github.com/motey)
 
 ### Register your script at Motherlode
 
