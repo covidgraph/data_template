@@ -11,35 +11,35 @@ We try to have data loading scripts in a certain format to build a automated dat
 When a developer created a script, it can be registered at https://github.com/covidgraph/motherlode
 
 Motherlode will run the script to load the data into the DEV instance of covidgraph.
-When the function and content of the data is verfied, it can be run by motherlode against the PROD instance.
+When the function and content of the data is verified, it can be run by motherlode against the PROD instance.
 
 If you write your script in python, you can take this repo as template. When you write in another laguage, take it as inspiration and just follow the "Connect to the correct neo4j instance" part
 
 # How it works
 
-All data source scripts will be wrapped in a docker container. Motherlode is just a python script, pulling the data source docker images from docker hub and run them.
+All data source scripts will be wrapped in a docker container. Motherlode is just a python script that pulls the data source docker images from docker hub and runs them.
 
 ## Your tasks overview
 
-The datasource script is responsible for following tasks:
+The datasource script is responsible for the following tasks:
 
 - Download the source data
 - Transform the source data
 - Connect to the correct neo4j instance
-- Load the data in a idempotent\* way into the database
+- Load the data in an idempotent\* way into the database
 
-\* "idempotent" means basicly, merge your nodes. If you script fails on half the way the first time, we want to be able to just re-run. Without duplicating all nodes that are allready loaded in the DB.
+\* "idempotent" means basically, merge your nodes. If your script fails on half the way the first time, we want to be able to just re-run. Without duplicating all nodes that are already loaded in the DB.
 
-After that you need todo following things to let your script work at the covid graph
+After that you need to do the following things to let your script work at the covid graph
 
-- Publish your script as docker image
+- Publish your script as a docker image
 - Register the script at https://github.com/covidgraph/motherlode
 
 ## Your tasks in detail
 
 ### Connect to the correct neo4j instance
 
-Motherlode will hand over following environment variables when your data source script is called:
+Motherlode will hand over the following environment variables when your data source script is called:
 
 `ENV`: will be `PROD` or `DEV`
 
@@ -59,10 +59,10 @@ We share the scripts via docker images at https://hub.docker.com/
 
 When you finished developeing your script, you have to "dockerize"/"container" it.
 
-### Build your script and puplish it
+### Build your script and publish it
 
-There are multiple ways, to build and puplish your script.
-The easist is to just run:
+There are multiple ways, to build and publish your script.
+The easiest is to just run:
 
 ```bash
 docker build -t data-my-datasource-script .
@@ -71,11 +71,11 @@ docker tag data-my-datasource-script:$tag covidgraph/data-my-datasource-script:v
 docker push covidgraph/data-my-datasource-script:$tag
 ```
 
-To be able to publish your script to the docker hub organization `covidgraph` (you need to be member. ping [Martin](https://github.com/mpreusse) or [Tim](https://github.com/motey) for that)
+To be able to publish your script to the docker hub organization `covidgraph` you need to be a member. ping [Martin](https://github.com/mpreusse) or [Tim](https://github.com/motey) for that)
 
-#### Publish via guthub actions
+#### Publish via github actions
 
-A more convienent way of puplishing your image is, to let github take care of that. You can use github `Actions` for that.
+A more convenient way of publishing your image is, to let github take care of that. You can use github `Actions` for that.
 As an example have a look at https://github.com/covidgraph/data_cord19 or ping [Tim](https://github.com/motey)
 
 ### Register your script at Motherlode
