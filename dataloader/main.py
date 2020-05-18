@@ -9,7 +9,7 @@ if __name__ == "__main__":
     PARENT_DIR = os.path.join(SCRIPT_DIR, "..")
     sys.path.append(os.path.normpath(PARENT_DIR))
 
-dataset_path = os.path.join(SCRIPT_DIR,"../dataset")
+dataset_path = os.path.join(PARENT_DIR,"dataset")
 
 download_dummy_function(dataset_path)
 
