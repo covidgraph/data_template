@@ -43,11 +43,7 @@ Motherlode will hand over the following environment variables when your data sou
 
 `ENV`: will be `PROD` or `DEV`
 
-`GC_NEO4J_URL`: The full bolt url. example 'bolt://myneo4jhostname:7687'
-
-`GC_NEO4J_USER`: The neo4j user
-
-`GC_NEO4J_PASSWORD`: The neo4j password
+`NEO4J`: A json string with the connection details. Parameter names are based on the [py2neo.Graph](https://py2neo.org/2020.0/database/index.html#individual-settings) format. e.g. NEO4J can be "{'host':'db.covidgraph.com','user':'neo4j','password':'somepw'}"
 
 **You have to take care that your script uses these variables to connect to the database**
 
