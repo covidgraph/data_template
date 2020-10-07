@@ -16,7 +16,7 @@ dataset_path = os.path.join(PARENT_DIR, "dataset")
 download_dummy_function(dataset_path)
 
 
-neo4j_config_str = os.getenv('NEO4J', {"host": "localhost"})
+neo4j_config_str = os.getenv('NEO4J', '{"host": "localhost"}')
 neo4j_config_dict = json.load(neo4j_config_str)
 
 ENV = os.getenv('ENV', 'prod')
