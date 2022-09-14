@@ -43,7 +43,15 @@ Motherlode will hand over the following environment variables when your data sou
 
 `ENV`: will be `PROD` or `DEV`
 
-`NEO4J`: A json string with the connection details. Parameter names are based on the [py2neo.Graph](https://py2neo.org/2020.0/database/index.html#individual-settings) format. e.g. NEO4J can be "{'host':'db.covidgraph.com','user':'neo4j','password':'somepw'}"
+`NEO4J`: A json string with the connection details. Parameter names are based on the [py2neo.Graph](https://py2neo.org/2020.0/database/index.html#individual-settings) format. e.g. NEO4J can be `{"host":"db.covidgraph.com","user":"neo4j","password":"somepw"}`
+
+In python you can use this very convenient with
+
+```python
+NEO4J_CONFIG_STRING = os.getenv("NEO4J")
+NEO4J_CONFIG_DICT = json.loads(NEO4J_CONFIG_STRING)
+graph = Graph(**NEO4J_CONFIG_DICT)
+``` 
 
 **You have to take care that your script uses these variables to connect to the database**
 
